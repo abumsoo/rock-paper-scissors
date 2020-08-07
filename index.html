@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function computerPlay (){
+        let randChoice = Math.floor(Math.random() * 3);
+        if (randChoice == 0) {
+          return 'rock';
+        } else if (randChoice == 1) {
+          return 'paper';
+        } else {
+          return 'scissors';
+        }
+      }
+
+      function playRound(playerSelection, computerSelection) {
+        let ps = playerSelection.toLowerCase();
+        let cs = computerSelection.toLowerCase();
+        if (ps == cs) {
+          return "You tied!"
+        } else if (((ps == "rock") && (cs == "paper")) ||
+                   ((ps == "paper") && (cs == "scissors")) ||
+                   ((ps == "scissors") && (cs == "rock"))) {
+          return  `You lose! ${cs} beats ${ps}.`;
+        } else {
+          return `You win! ${ps} beats ${cs}.`;
+        }
+      }
+
+      function game() {
+        for (let i = 0; i < 5; i++) {
+          let ps = prompt("Rock, paper, or scissors? ");
+          let cs = computerPlay();
+          let winner = playRound(ps, cs);
+          console.log(winner);
+        }
+      }
+
+    </script>
+  </body>
+</html>
