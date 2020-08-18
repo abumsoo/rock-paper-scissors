@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+
+    <h1>Rock, Paper, Scissors</h1>
+    <h2>First to 5</h2>
+    <button id="1">Play</button>
+
+    <div class="results"></div>
+
+    <script src='script.js'></script>
+  </body>
+</html>
